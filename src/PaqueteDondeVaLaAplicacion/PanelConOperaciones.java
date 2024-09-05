@@ -14,6 +14,7 @@ public class PanelConOperaciones {
     private JPanel pnlOperaciones;
     private JButton btnBorrar;
     int resultado;
+    double resultado2;
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Operaciones");
@@ -53,7 +54,7 @@ public class PanelConOperaciones {
         btnDivisión.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                resultado = Integer.parseInt(txtNum1.getText()) / Integer.parseInt(txtNum2.getText());
+                resultado2 = Double.parseDouble(txtNum1.getText()) / Double.parseDouble(txtNum2.getText());
                 JOptionPane.showMessageDialog(null, resultado);
             }
         });
