@@ -11,18 +11,15 @@ public class PanelConOperaciones {
     private JButton btnSuma;
     private JButton btnMullti;
     private JButton btnResta;
+    private JPanel pnlOperaciones;
+    private JButton btnBorrar;
     int resultado;
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Mi Primer App con Swing GUI");
+        JFrame frame = new JFrame("Operaciones");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500,300); //Tamaño de la ventana
-        frame.setContentPane(new Panel().pnlInicio);
-        //frame.setBounds(30,30,500,300);
-        //prueba del git
-        //prueba tres
-        //
-        //cambio
+        frame.setContentPane(new PanelConOperaciones().pnlOperaciones);
         frame.pack();
         frame.setVisible(true);
 
@@ -34,6 +31,38 @@ public class PanelConOperaciones {
             public void actionPerformed(ActionEvent e) {
                 resultado = Integer.parseInt(txtNum1.getText()) + Integer.parseInt(txtNum2.getText());
                 JOptionPane.showMessageDialog(null, resultado);
+            }
+        });
+
+        btnResta.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resultado = Integer.parseInt(txtNum1.getText()) - Integer.parseInt(txtNum2.getText());
+                JOptionPane.showMessageDialog(null, resultado);
+            }
+        });
+
+        btnMullti.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resultado = Integer.parseInt(txtNum1.getText()) * Integer.parseInt(txtNum2.getText());
+                JOptionPane.showMessageDialog(null, resultado);
+            }
+        });
+
+        btnDivisión.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                resultado = Integer.parseInt(txtNum1.getText()) / Integer.parseInt(txtNum2.getText());
+                JOptionPane.showMessageDialog(null, resultado);
+            }
+        });
+
+        btnDivisión.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                txtNum1.setText("");
+                txtNum2.setText("");
             }
         });
 
