@@ -55,11 +55,11 @@ public class PanelConOperaciones {
             @Override
             public void actionPerformed(ActionEvent e) {
                 resultado2 = Double.parseDouble(txtNum1.getText()) / Double.parseDouble(txtNum2.getText());
-                JOptionPane.showMessageDialog(null, resultado);
+                JOptionPane.showMessageDialog(null, resultado2);
             }
         });
 
-        btnDivisión.addActionListener(new ActionListener() {
+        btnBorrar.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 txtNum1.setText("");
